@@ -1,3 +1,5 @@
+import TransCss from "./TransactionHistory.modules.css";
+
 const TransactionHistory = () => {
   return (
     <>

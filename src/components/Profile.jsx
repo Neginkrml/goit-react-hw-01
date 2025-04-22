@@ -1,3 +1,5 @@
+import ProfileCss from "./FriendList.module.css";
+
 const Profile = () => {
   return (
     <>
