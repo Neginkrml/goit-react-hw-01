@@ -1,24 +1,30 @@
 import FriendsCss from "./FriendList.module.css";
 
-const FriendListItem = () => {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
       <div>
-        <img src="" alt="Avatar" width="48" />
-        <p>Friend name</p>
-        <p>Friend status</p>
+        <img src={avatar} alt={name} width="48" />
+        <p>{name}</p>
+        <p>{isOnline ? "online" : " offline"}</p>
       </div>
     </>
   );
 };
 
-const FriendList = () => {
+const FriendList = ({ friends }) => {
   <ul>
-    {/* li sayısı, dizideki nesne sayısına bağlıdır */}
-    <li>
-      <FriendListItem />
-    </li>
+    {friends.map((friend) => {
+      return (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.isOnline}
+          id={friend.id}
+        />
+      );
+    })}
   </ul>;
 };
 
-export default FriendList;
+export default FriendListItem;

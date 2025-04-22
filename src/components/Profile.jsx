@@ -1,31 +1,37 @@
-import ProfileCss from "./FriendList.module.css";
+import ProfileCss from "./Profile.module.css";
 
-const Profile = () => {
+const Profile = ({
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
   return (
     <>
-      <div>
-        <div>
+      <div className={ProfileCss.all}>
+        <div className={ProfileCss.user}>
           <img
-            src="<https://cdn-icons-png.flaticon.com/512/1077/1077012.png>"
+            className={ProfileCss.img}
+            src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
             alt="User avatar"
           />
-          <p>Petra Marica</p>
-          <p>@pmarica</p>
-          <p>Salvador, Brasil</p>
+          <p className={ProfileCss.userName}>{username}</p>
+          <p className={ProfileCss.userTag}>@{tag}</p>
+          <p className={ProfileCss.userTag}>{location}</p>
         </div>
 
-        <ul>
-          <li>
-            <span>Followers</span>
-            <span>1000</span>
+        <ul className={ProfileCss.userUl}>
+          <li className={ProfileCss.userLi}>
+            <span className={ProfileCss.userStats}>Followers</span>
+            <span className={ProfileCss.userStatts}>{followers}</span>
           </li>
-          <li>
-            <span>Views</span>
-            <span>2000</span>
+          <li className={ProfileCss.userLi}>
+            <span className={ProfileCss.userStats}>Views</span>
+            <span className={ProfileCss.userStatts}>{views}</span>
           </li>
-          <li>
-            <span>Likes</span>
-            <span>3000</span>
+          <li className={ProfileCss.userLi}>
+            <span className={ProfileCss.userStats}>Likes</span>
+            <span className={ProfileCss.userStatts}>{likes}</span>
           </li>
         </ul>
       </div>

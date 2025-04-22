@@ -1,0 +1,41 @@
+.all {
+  width: 330px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #f8f2f2c5;
+}
+
+.img {
+  border: 1px solid rgb(228, 225, 225);
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.userTag {
+  color: rgb(137, 136, 136);
+  font-size: 20px;
+}
+.userUl {
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: end;
+  /* text-align: end; */
+}
+.userLi {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.userStats {
+  font-weight: 600;
+  font-size: 25px;
+}
+.userStatts {
+  font-size: 20px;
+}
