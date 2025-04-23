@@ -1,8 +1,14 @@
+import React from "react";
+import "modern-normalize";
+
 import "./App.css";
+
 import userData from "./data/userData.json";
 import Profile from "./components/Profile";
+
 import friends from "./data/friends.json";
 import FriendList from "./components/FriendList";
+
 import transactions from "./data/transactions.json";
 import TransactionHistory from "./components/TransactionHistory";
 
@@ -10,7 +16,7 @@ const App = () => {
   return (
     <>
       <Profile
-        name={userData.username}
+        username={userData.username}
         tag={userData.tag}
         location={userData.location}
         image={userData.avatar}

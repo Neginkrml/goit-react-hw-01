@@ -1,28 +1,27 @@
-// import TransCss from "./TransactionHistory.modules.css";
+import TransCss from "./TransactionHistory.module.css";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ items }) => {
   return (
     <>
-      <table>
+      <table className={TransCss.transHistory}>
         <thead>
-          <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+          <tr className={TransCss.transHead}>
+            <th className={TransCss.transth}>Type</th>
+            <th className={TransCss.transth}>Amount</th>
+            <th className={TransCss.transth}>Currency</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>Invoice</td>
-            <td>125</td>
-            <td>USD</td>
-          </tr>
-          <tr>
-            <td>Withdrawal</td>
-            <td>85</td>
-            <td>USD</td>
-          </tr>
+          {items.map((item, index) => {
+            return (
+              <tr className={TransCss.transList} key={index}>
+                <td className={TransCss.transItemm}>{item.type}</td>
+                <td className={TransCss.transItemm}>{item.amount}</td>
+                <td className={TransCss.transItemm}>{item.currency}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </>

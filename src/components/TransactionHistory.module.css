@@ -1,0 +1,36 @@
+.transHistory {
+  max-width: 1024px;
+}
+
+.transHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+
+  color: white;
+}
+
+.transth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.transList {
+  display: flex;
+  flex-direction: row;
+}
+
+.transItemm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+.isOnline {
+  font-size: 20px;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.friendList {
+  display: flex;
+  flex-direction: row; /* li'ler yan yana */
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border: 2px solid #00000090;
+  border-radius: 10px;
+  list-style-type: none; /* liste işareti yok */
+}
+
+.fLimg {
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.frienddList {
+  display: flex;
+  flex-direction: column; /* resim ve yazılar alt alta */
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
